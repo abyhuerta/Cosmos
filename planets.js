@@ -48,8 +48,8 @@ scene.add(sun)
 var sunLight = new THREE.PointLight(0xFFFFFF, 40, 100000000); // Color, intensity, and range
 sunLight.position.copy(sun.position); // Position the light at the sun's location
 scene.add(sunLight); // Add the light to the scene
-
-//create the earth
+//create the planets
+//earth
 var eGeometry = new THREE.SphereGeometry(0.5,32,32);
 var earthMaterial = new THREE.MeshPhongMaterial({ 
   map: new THREE.TextureLoader().load('img/earthmap.jpg') 
@@ -58,7 +58,7 @@ var earth = new THREE.Mesh(eGeometry,earthMaterial);
 scene.add(earth);
 earth.position.set(40,30,-100);
 
-//create Mercury
+//Mercury
 var merGeometry = new THREE.SphereGeometry(0.2, 32, 32);
 var mercuryMaterial = new THREE.MeshPhongMaterial({ 
   map: new THREE.TextureLoader().load('img/mercurymap.jpg') 
