@@ -236,7 +236,7 @@ var nDate;
 // Update, render, repeat
 var planetLoop = function() {
   eDate = Date.now() * 0.0006;
-  mDate = Date.now() * 0.0043;
+  mDate = Date.now() * 0.0020;
   vDate = Date.now() * 0.0008;
   marsDate = Date.now() * 0.0003;
   jDate = Date.now() * 0.0001;
