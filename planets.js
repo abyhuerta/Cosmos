@@ -133,10 +133,9 @@ var ringMaterial = new THREE.MeshLambertMaterial({
   side: THREE.DoubleSide // Ensure the ring is visible from both sides
 });
 var uranusRing = new THREE.Mesh(
-  new THREE.RingGeometry(0.9, 1.3, 30), // Define a ring geometry
+  new THREE.RingGeometry(0.9, 1, 30), // Define a ring geometry
   ringMaterial
 );
-uranusRing.rotation.x = Math.PI / 2; // Correct the rotation to be horizontal
 // Add the ring to Uranus
 uranus.add(uranusRing);
 // Add Uranus to the scene
@@ -179,8 +178,8 @@ var vOrbitRadius = 6;
 var marsOrbitRadius = 10;
 var jOrbitRadius = 16;
 var sOrbitRadius = 20;
-var uOrbitRadius = 22;
-var nOrbitRadius = 24;
+var uOrbitRadius = 26;
+var nOrbitRadius = 30;
 
 //orbit outlines
 var orbitSegments = 64; //makes it a circle, if you set it to 0 teh outlines become a triangle
@@ -214,14 +213,14 @@ function createSmoothOrbit(radius) {
   return orbit; // Return the orbit
 }
 // Create and add the orbits to the scene
-scene.add(createSmoothOrbit(4, 128)); // Mercury
-scene.add(createSmoothOrbit(6, 128)); // Venus
-scene.add(createSmoothOrbit(8, 128)); // Earth
-scene.add(createSmoothOrbit(10, 128)); // Mars
-scene.add(createSmoothOrbit(16, 128)); // Jupiter
-scene.add(createSmoothOrbit(20, 128)); // Saturn
-scene.add(createSmoothOrbit(22, 128)); // Uranus
-scene.add(createSmoothOrbit(24, 128)); // Neptune
+scene.add(createSmoothOrbit(mOrbitRadius)); // Mercury
+scene.add(createSmoothOrbit(vOrbitRadius)); // Venus
+scene.add(createSmoothOrbit(eOrbitRadius)); // Earth
+scene.add(createSmoothOrbit(marsOrbitRadius)); // Mars
+scene.add(createSmoothOrbit(jOrbitRadius)); // Jupiter
+scene.add(createSmoothOrbit(sOrbitRadius)); // Saturn
+scene.add(createSmoothOrbit(uOrbitRadius)); // Uranus
+scene.add(createSmoothOrbit(nOrbitRadius)); // Neptune
 
 // Orbital speed
 var eDate;
