@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -13,15 +14,19 @@
       height: 100%;
     }
   </style>
+   <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+        "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 
 <body>
-  <script src="lib/three.js"></script>
-  <script src="lib/three.min.js"></script>
-  <script src="lib/OrbitControls.js"></script>
 
- 
-
+  <script type="module" src="planets.js"></script>
 </body>
 
 </html>
